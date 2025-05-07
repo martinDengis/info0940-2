@@ -1,0 +1,72 @@
+[TEST] 2025-05-07 12:33:37 - Basic File System Tests
+
+====================================
+TEST: Basic File System Tests
+====================================
+Starting Basic File System Testing Suite
+----------------------------------
+
+===== TESTING: Format =====
+Disk 'test_disk.img' formatted successfully with 10 inodes
+✓ PASS: Format disk
+
+===== TESTING: Mount =====
+Disk 'test_disk.img' mounted successfully
+✓ PASS: Mount disk
+
+===== TESTING: Create file =====
+File created successfully with inode number: 0
+✓ PASS: Create file
+
+===== TESTING: Create second file =====
+Second file created successfully with inode number: 1
+✓ PASS: Create second file
+
+===== TESTING: Write to file =====
+Wrote 25 bytes to inode 0
+✓ PASS: Write to file
+
+===== TESTING: Stat file =====
+File with inode 0 has size: 25 bytes
+✓ PASS: Stat file
+
+===== TESTING: Read from file =====
+Read 25 bytes from inode 0: 'Hello, File System World!'
+Data verification successful
+✓ PASS: Read from file
+
+===== TESTING: Append to file =====
+Appended 25 bytes to inode 0
+File contents:
+Hello, File System World! This is additional data.
+✓ PASS: Append to file
+
+===== TESTING: Delete file =====
+File with inode 1 deleted successfully
+✓ PASS: Delete file
+
+===== TESTING: Create file after deletion =====
+New file created with inode number: 1
+Successfully recycled the deleted inode
+✓ PASS: Create file after deletion
+
+===== TESTING: Unmount =====
+Disk unmounted successfully
+✓ PASS: Unmount disk
+
+===== TESTING: Remount and verify persistence =====
+Disk 'test_disk.img' remounted successfully
+File with inode 0 still exists with size: 50 bytes
+File contents:
+Hello, File System World! This is additional data.
+✓ PASS: Remount and verify persistence
+
+===== TEST SUMMARY =====
+Total tests: 12
+Passed: 12
+Failed: 0
+Success rate: 100.0%
+
+
+==== FINAL TEST SUMMARY ====
+Basic Tests: 12/12 passed (100.0%)

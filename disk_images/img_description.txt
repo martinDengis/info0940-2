@@ -1,0 +1,9 @@
+disk_img.2
+inode 0: disk_img.3
+inode 1: JPG image
+inode 2: text file (description of disk images)
+disk_img.3
+inode 1: PNG image
+inode 2: SVG image
+inode 3: Random bytes
+inode 4: empty file
